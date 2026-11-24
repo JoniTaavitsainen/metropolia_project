@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight_game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
 </head>
 <body>
-    
+    <main class="login-container">
+        <div class="login-box">
+            <h1>metropolia projekti</h1>
+            <p>Kirjaudu sisään peliin</p>
+
+            <form id="auth-form">
+
+                <label for="username">Käyttäjänimi</label>
+                <input type="text" id="username"
+                    placeholder="Käyttäjänimi" required>
+
+                <label for="password">Salasana</label>
+                <input type="password" id="password"
+                    placeholder="Salasana" required>
+
+                <div id="confirm-container" hidden>
+                    <label for="confirm-password">Vahvista salasana</label>
+                    <input type="password" id="confirm-password"
+                        placeholder="Vahvista salasana">
+                </div>
+
+                <button type="submit" class="login-btn" id="submit-btn">
+                    Kirjaudu sisään
+                </button>
+            </form>
+
+            <button class="register-btn" type="button" id="tab-register">
+                Luo uusi käyttäjä
+            </button>
+
+            <button type="button" id="tab-login" hidden>
+                Kirjaudu sisään
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+    </main>
 </body>
 </html>
