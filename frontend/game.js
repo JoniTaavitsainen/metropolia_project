@@ -1,7 +1,5 @@
-
 "use strict";
 
-// DOM element references
 const form = document.getElementById("auth-form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
