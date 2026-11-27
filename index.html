@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolia projekti</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <main class="login-container">
+
+        <div class="login-box" id="auth-view">
+            <h1>Metropolia projekti</h1>
+            <p>Kirjaudu sisään peliin</p>
+
+            <form id="auth-form">
+
+                <label for="username">Käyttäjänimi</label>
+                <input type="text" id="username"
+                    placeholder="Käyttäjänimi" required>
+
+                <label for="password">Salasana</label>
+                <input type="password" id="password"
+                    placeholder="Salasana" required>
+
+                <div id="confirm-container" hidden>
+                    <label for="confirm-password">Vahvista salasana</label>
+                    <input type="password" id="confirm-password"
+                        placeholder="Vahvista salasana">
+                </div>
+
+                <button type="submit" class="login-btn" id="submit-btn">
+                    Kirjaudu sisään
+                </button>
+            </form>
+
+            <button class="register-btn" type="button" id="tab-register">
+                Luo uusi käyttäjä
+            </button>
+
+            <button type="button" id="tab-login" hidden>
+                Kirjaudu sisään
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <div class="login-box" id="saves-view" hidden>
+            <h1>Valitse tallennus</h1>
+            <p>Pelaaja: <strong id="current-user"></strong></p>
+            <p id="record" class="record"></p>
+
+            <ul id="save-list" class="save-list"></ul>
+            <p id="no-saves" hidden>Ei vielä tallennuksia. Luo ensimmäinen!</p>
+
+            <button type="button" class="login-btn" id="new-save-btn">
+                Luo uusi tallennus
+            </button>
+            <button type="button" id="logout-btn">Kirjaudu ulos</button>
+
+            <p id="saves-message"></p>
+        </div>
+
+    
+        <div class="login-box" id="game-view" hidden>
+            <h1>Peli</h1>
+            <p>Valittu tallennus: <strong id="selected-save"></strong></p>
+            <p>Peli käynnistyisi tästä.</p>
+            <button type="button" id="back-btn">Takaisin tallennuksiin</button>
+        </div>
+
+    </main>
+</body>
+</html>
